@@ -1,5 +1,4 @@
-﻿
-namespace BlankApp2.Views
+﻿namespace BlankApp2.Views
 {
     public partial class MainPage
     {

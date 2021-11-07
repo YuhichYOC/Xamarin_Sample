@@ -37,4 +37,3 @@ namespace BlankApp2.Droid
         }
     }
 }
-
