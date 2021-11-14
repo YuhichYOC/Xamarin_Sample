@@ -1,7 +1,6 @@
 ﻿using BlankApp2.Models;
 using System;
 using System.Windows.Input;
-
 namespace BlankApp2.ViewModels
 {
     internal class Page1ViewModel
@@ -27,6 +26,7 @@ namespace BlankApp2.ViewModels
         public void Execute(object parameter)
         {
             Console.WriteLine(@"ButtonCommand " + parameter.ToString());
+            Xamarin.Forms.DependencyService.Get<BlankApp2.Infrastructure.IToaster>().Show(@"ButtonCommand " + parameter.ToString());
         }
     }
 }
