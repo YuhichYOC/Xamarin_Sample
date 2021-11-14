@@ -1,4 +1,6 @@
-﻿namespace BlankApp2.Models
+﻿using System.Windows.Input;
+
+namespace BlankApp2.Models
 {
     internal class TestDataRow
     {
@@ -13,6 +15,8 @@
         public string Property5 { get; set; }
 
         public string Property6 { get; set; }
+
+        public ICommand ButtonCommand { get; set; }
 
         public TestDataRow()
         {

@@ -1,4 +1,6 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Input;
 
 namespace BlankApp2.Models
 {
@@ -19,6 +21,11 @@ namespace BlankApp2.Models
             Rows.Add(new TestDataRow() { Property1 = "h1", Property2 = "h2", Property3 = "h3", Property4 = "h4", Property5 = "h5", Property6 = "h6" });
             Rows.Add(new TestDataRow() { Property1 = "i1", Property2 = "i2", Property3 = "i3", Property4 = "i4", Property5 = "i5", Property6 = "i6" });
             Rows.Add(new TestDataRow() { Property1 = "j1", Property2 = "j2", Property3 = "j3", Property4 = "j4", Property5 = "j5", Property6 = "j6" });
+        }
+
+        public void AddButtonCommand(ICommand arg)
+        {
+            Rows.ToList().ForEach(row => row.ButtonCommand = arg);
         }
     }
 }

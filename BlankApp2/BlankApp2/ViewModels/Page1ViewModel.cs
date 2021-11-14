@@ -1,4 +1,6 @@
 ﻿using BlankApp2.Models;
+using System;
+using System.Windows.Input;
 
 namespace BlankApp2.ViewModels
 {
@@ -9,6 +11,22 @@ namespace BlankApp2.ViewModels
         public Page1ViewModel()
         {
             Data = new TestData01();
+            Data.AddButtonCommand(new Page1ButtonCommand());
+        }
+    }
+
+    public class Page1ButtonCommand : ICommand
+    {
+        public event EventHandler CanExecuteChanged;
+
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
+        public void Execute(object parameter)
+        {
+            Console.WriteLine(@"ButtonCommand " + parameter.ToString());
         }
     }
 }
