@@ -1,6 +1,7 @@
 ﻿using BlankApp2.Models;
 using System;
 using System.Windows.Input;
+
 namespace BlankApp2.ViewModels
 {
     internal class Page1ViewModel
