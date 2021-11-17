@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace BlankApp2.Models
 {
-    internal class TestDataRow : INotifyPropertyChanged
+    public class TestDataRow : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
