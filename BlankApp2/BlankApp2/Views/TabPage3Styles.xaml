@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary
+    x:DataType="model:TestDataRow"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:BlankApp2.Models"
+    x:Class="BlankApp2.Views.TabPage3Styles">
+    <Style Class="u-g" TargetType="Rectangle">
+        <Setter Property="BackgroundColor" Value="LightGray" />
+    </Style>
+    <Style Class="u-w" TargetType="Rectangle">
+        <Setter Property="BackgroundColor" Value="White" />
+    </Style>
+    <Style Class="l-g" TargetType="Rectangle">
+        <Setter Property="BackgroundColor" Value="LightGray" />
+    </Style>
+    <Style Class="l-w" TargetType="Rectangle">
+        <Setter Property="BackgroundColor" Value="White" />
+    </Style>
+    <Style Class="columnheader" TargetType="Grid">
+        <Setter Property="BackgroundColor" Value="Gray" />
+        <Setter Property="RowSpacing" Value="2" />
+        <Setter Property="ColumnSpacing" Value="1" />
+        <Setter Property="RowDefinitions">
+            <RowDefinitionCollection>
+                <RowDefinition />
+                <RowDefinition />
+            </RowDefinitionCollection>
+        </Setter>
+        <Setter Property="ColumnDefinitions">
+            <ColumnDefinitionCollection>
+                <ColumnDefinition Width="180" />
+                <ColumnDefinition Width="280" />
+                <ColumnDefinition Width="280" />
+            </ColumnDefinitionCollection>
+        </Setter>
+    </Style>
+    <Style Class="row" TargetType="Grid">
+        <Setter Property="BackgroundColor" Value="Gray" />
+        <Setter Property="RowSpacing" Value="2" />
+        <Setter Property="ColumnSpacing" Value="1" />
+        <Setter Property="RowDefinitions">
+            <RowDefinitionCollection>
+                <RowDefinition />
+                <RowDefinition />
+            </RowDefinitionCollection>
+        </Setter>
+        <Setter Property="ColumnDefinitions">
+            <ColumnDefinitionCollection>
+                <ColumnDefinition Width="180" />
+                <ColumnDefinition Width="280" />
+                <ColumnDefinition Width="280" />
+            </ColumnDefinitionCollection>
+        </Setter>
+    </Style>
+    <DataTemplate x:Key="grid">
+        <Grid StyleClass="row" Padding="0,1,0,0">
+            <Rectangle Grid.Row="0" Grid.Column="0" StyleClass="u-g" />
+            <Rectangle Grid.Row="0" Grid.Column="1" StyleClass="u-w" />
+            <Rectangle Grid.Row="0" Grid.Column="2" StyleClass="u-w" />
+            <Rectangle Grid.Row="1" Grid.Column="0" StyleClass="l-g" />
+            <Rectangle Grid.Row="1" Grid.Column="1" StyleClass="l-w" />
+            <Rectangle Grid.Row="1" Grid.Column="2" StyleClass="l-w" />
+            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Property1}" />
+            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Property2}" />
+            <Label Grid.Row="0" Grid.Column="2" Text="{Binding Property3}" Grid.RowSpan="{Binding RowSpan}" />
+            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Property4}" />
+            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Property5}" />
+            <Label Grid.Row="1" Grid.Column="2" Text="{Binding Property6}" />
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>
